@@ -1,0 +1,41 @@
+<html>
+<h1>Hi There, Mail from expense tracker</h1>
+
+<%=@user %> updated the transastion.
+<%
+=begin%>
+ <p>
+  <%= @greeting %>, 
+</p> 
+<%
+=end%>
+
+<body>
+
+<h3>Here's your transaction history:</h3>
+<table class="table">
+  <tr>
+    <th>user_id</th>
+    <th>title</th>
+    <th>billNo</th>
+    <th>group</th>
+    <th>Amount</th>
+    <th>Bill Date</th>
+    
+  </tr>
+ 
+<% @entries.each do |x| %>
+
+  <tr>
+    <td><%= x.user_id %></td>
+    <td><%= x.title %></td> 
+    <td><%= x.billNo%></td>
+    <td><%= x.group%></td>
+    <td><%= x.amount%></td>
+    <td><%= x.BillDate%></td>
+
+  </tr>
+<% end %>
+</table>
+  </body>
+</html>

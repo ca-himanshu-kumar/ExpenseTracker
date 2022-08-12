@@ -1,0 +1,49 @@
+<%= form_with(model: exp_entry, local: true) do |form| %>
+  <% if exp_entry.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(exp_entry.errors.count, "error") %> prohibited this exp_entry from being saved:</h2>
+
+      <ul>
+        <% exp_entry.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%# <%= form.label :user_id %>
+    <%= form.number_field :user_id, value:current_user.id, type: :hidden %>
+  </div>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :group %>
+    <%= form.number_field :group %>
+  </div>
+
+  <div class="field">
+    <%= form.label :billNo %>
+    <%= form.text_field :billNo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :amount %>
+    <%= form.text_field :amount %>
+  </div>
+
+  <div class="field">
+    <%= form.label :BillDate %>
+    <%= form.date_select :BillDate %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<%# <%= link_to 'Back', exp_entries_path %>
+
+<% end %>

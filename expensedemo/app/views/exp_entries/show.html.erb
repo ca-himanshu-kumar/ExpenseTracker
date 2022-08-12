@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @exp_entry.title %>
+</p>
+
+<p>
+  <strong>Group:</strong>
+  <%= @exp_entry.group %>
+</p>
+
+<p>
+  <strong>Billno:</strong>
+  <%= @exp_entry.billNo %>
+</p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @exp_entry.amount %>
+</p>
+
+<p>
+  <strong>Billdate:</strong>
+  <%= @exp_entry.BillDate %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @exp_entry.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_exp_entry_path(@exp_entry) %> |
+<%= link_to 'Back', exp_entries_path %>
